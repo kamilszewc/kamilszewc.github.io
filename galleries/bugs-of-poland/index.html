@@ -101,7 +101,49 @@
         </div>
     </header>
 
-    
+    <main class="container">
+        <!-- Gallery title -->
+        <h2 class="text-center mb-4">Bugs of Poland</h2>
+
+        <!-- Gallery images -->
+        <div class="row">
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/bugs-of-poland/images/2023_biedronka_na_czerwonym.jpg')" width="400" height="300" src="/galleries/bugs-of-poland/images/2023_biedronka_na_czerwonym.jpg" alt="description"/>
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/bugs-of-poland/images/2023_osa_na_kaktusie.jpg')" width="400" height="300" src="/galleries/bugs-of-poland/images/2023_osa_na_kaktusie.jpg" alt="description"/>
+            </div>
+
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/bugs-of-poland/images/2024_6_biedronka_na_fioletowym_tle.jpg')" width="400" height="300" src="/galleries/bugs-of-poland/images/2024_6_biedronka_na_fioletowym_tle.jpg" alt="description"/>
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/bugs-of-poland/images/2024_6_biedronka_na_rurce.jpg')" width="400" height="300" src="/galleries/bugs-of-poland/images/2024_6_biedronka_na_rurce.jpg" alt="description"/>
+            </div>
+
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/bugs-of-poland/images/2024_6_chrzaszcz_na_zoltym_tle.jpg')" width="400" height="300" src="/galleries/bugs-of-poland/images/2024_6_chrzaszcz_na_zoltym_tle.jpg" alt="description"/>
+            </div>
+        </div>
+
+        <!-- Image zoom modal -->
+        <div id="gallery-modal" class="modal gallery-modal" onclick="closeModal()">
+            <!-- Close button -->
+            <span class="gallery-modal-close cursor" onclick="closeModal()">&times;</span>
+            <!-- Full screen image -->
+            <div class="gallery-modal-content text-center">
+                <img id="gallery-modal-image" class="img-fluid rounded gallery-img-full-screen">
+            </div>
+        </div>
+
+        <!-- Image zoom modal opening/closing scripts -->
+        <script>
+            function openModal(src) {
+                document.getElementById("gallery-modal").style.display = "block";
+                document.getElementById("gallery-modal-image").src = src;
+            }
+
+            function closeModal() {
+                document.getElementById("gallery-modal").style.display = "none";
+            }
+        </script>
+    </main>
 
     <div class="footer">
         <!-- Copyright info -->

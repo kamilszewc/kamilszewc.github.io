@@ -101,7 +101,47 @@
         </div>
     </header>
 
-    
+    <main class="container">
+        <!-- Gallery title -->
+        <h2 class="text-center mb-4">Birds of Poland</h2>
+
+        <!-- Gallery images -->
+        <div class="row">
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/birds-of-poland/images/2023_5_strzyzyk.jpg')" width="400" height="300" src="/galleries/birds-of-poland/images/2023_5_strzyzyk.jpg" alt="description"/>
+            </div>
+
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/birds-of-poland/images/2023_5_zieba.jpg')" width="400" height="300" src="/galleries/birds-of-poland/images/2023_5_zieba.jpg" alt="description"/>
+            </div>
+
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/birds-of-poland/images/2023_6_gasiorek.jpg')" width="400" height="300" src="/galleries/birds-of-poland/images/2023_6_gasiorek.jpg" alt="description"/>
+            </div>
+        </div>
+
+        <!-- Image zoom modal -->
+        <div id="gallery-modal" class="modal gallery-modal" onclick="closeModal()">
+            <!-- Close button -->
+            <span class="gallery-modal-close cursor" onclick="closeModal()">&times;</span>
+            <!-- Full screen image -->
+            <div class="gallery-modal-content text-center">
+                <img id="gallery-modal-image" class="img-fluid rounded gallery-img-full-screen">
+            </div>
+        </div>
+
+        <!-- Image zoom modal opening/closing scripts -->
+        <script>
+            function openModal(src) {
+                document.getElementById("gallery-modal").style.display = "block";
+                document.getElementById("gallery-modal-image").src = src;
+            }
+
+            function closeModal() {
+                document.getElementById("gallery-modal").style.display = "none";
+            }
+        </script>
+    </main>
 
     <div class="footer">
         <!-- Copyright info -->
