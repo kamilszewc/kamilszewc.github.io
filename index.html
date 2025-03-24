@@ -87,7 +87,7 @@
                                 </p>
                                 <ul class="list-unstyled">
                                     <li><a href="https://500px.com/p/szeka?view=photos">500px</a> - photography is what I love and do</li>
-                                    <li><a href="https://linkedin.com/in/kamil-szewc-5148b2190">LinkedIn</a> - work related stuff, I am not there frequently</li>
+                                    <!-- <li><a href="https://linkedin.com/in/kamil-szewc-5148b2190">LinkedIn</a> - work related stuff, I am not there frequently</li> -->
                                     <li><a href="https://www.researchgate.net/profile/K-Szewc">ResearchGate</a> - yes, I was working in Academia for some time</li>
                                 </ul>
                                 <p>
@@ -100,6 +100,46 @@
             </div>
         </div>
     </header>
+
+    <main class="container">
+
+        <!-- List of galleries -->
+        <div class="row mb-2 mt-4 ">
+
+            <!-- Birds of poland -->
+            <div class="col-md-6">
+            
+                <!-- Larger screens -->
+                <div class="d-none d-lg-block">
+                    <div class="card row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-secondary mb-3">Tag</strong>
+                            <h3 class="mb-3">Title</h3>
+                            <p class="card-text mb-auto">Description</p>
+                            <a href="/" class="stretched-link"></a>
+                        </div>
+                        <div class="col-auto">
+                            <img class="bd-placeholder-img" width="200" height="250" src="/galleries/birds-of-poland/thumbnail-vertical.jpg"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smaller screens -->
+                <div class="d-block d-lg-none">
+                    <div class="card">
+                        <img class="card-img-top" width="200" height="250" th:src="/galleries/birds-of-poland/thumbnail-horizontal.jpg"/>
+                        <div class="card-body">
+                            <h3 class="card-title">Title</h3>
+                            <p class="card-text">Description</p>
+                            <strong class="d-inline-block mb-2 text-secondary">Tag</strong>
+                            <a th:href="/" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
 
     <div class="footer">
         <!-- Copyright info -->
