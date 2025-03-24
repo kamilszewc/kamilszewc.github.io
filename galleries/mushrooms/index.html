@@ -101,6 +101,51 @@
         </div>
     </header>
 
+    <main class="container">
+        <!-- Gallery title -->
+        <h2 class="text-center mb-4"">Mushrooms</h2>
+
+        <!-- Gallery images -->
+        <div class="row">
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('/galleries/mushrooms/images/2022_grzyb.jpg')|" width="400" height="300" src="/galleries/mushrooms/images/2022_grzyb.jpg" alt="description"/>
+ 
+                <!-- <img th:each="image, stat : ${images}" th:if="${stat.index % 3 == 0}" class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('${image.getUrl()}')|" width="400" height="300" th:src="${image.getUrl()}" alt="description"/> -->
+            </div>
+
+            <div class="col-lg-4 mb-lg-0">
+                <img class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('/galleries/mushrooms/images/2014_grzyby.jpg')|" width="400" height="300" th:src="/galleries/mushrooms/images/2014_grzyby.jpg" alt="description"/>
+
+                <!-- <img th:each="image, stat : ${images}" th:if="${stat.index % 3 == 1}" class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('${image.getUrl()}')|" width="400" height="300" th:src="${image.getUrl()}" alt="description"/> -->
+            </div>
+
+            <!-- <div class="col-lg-4 mb-lg-0">
+                <img th:each="image, stat : ${images}" th:if="${stat.index % 3 == 2}" class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('${image.getUrl()}')|" width="400" height="300" th:src="${image.getUrl()}" alt="description"/>
+            </div> -->
+        </div>
+
+        <!-- Image zoom modal -->
+        <div id="gallery-modal" class="modal gallery-modal" onclick="closeModal()">
+            <!-- Close button -->
+            <span class="gallery-modal-close cursor" onclick="closeModal()">&times;</span>
+            <!-- Full screen image -->
+            <div class="gallery-modal-content text-center">
+                <img id="gallery-modal-image" class="img-fluid rounded gallery-img-full-screen">
+            </div>
+        </div>
+
+        <!-- Image zoom modal opening/closing scripts -->
+        <script>
+            function openModal(src) {
+                document.getElementById("gallery-modal").style.display = "block";
+                document.getElementById("gallery-modal-image").src = src;
+            }
+
+            function closeModal() {
+                document.getElementById("gallery-modal").style.display = "none";
+            }
+        </script>
+    </main>
     
 
     <div class="footer">
