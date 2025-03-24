@@ -108,13 +108,13 @@
         <!-- Gallery images -->
         <div class="row">
             <div class="col-lg-4 mb-lg-0">
-                <img class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('/galleries/mushrooms/images/2022_grzyb.jpg')|" width="400" height="300" src="/galleries/mushrooms/images/2022_grzyb.jpg" alt="description"/>
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/mushrooms/images/2022_grzyb.jpg')" width="400" height="300" src="/galleries/mushrooms/images/2022_grzyb.jpg" alt="description"/>
  
                 <!-- <img th:each="image, stat : ${images}" th:if="${stat.index % 3 == 0}" class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('${image.getUrl()}')|" width="400" height="300" th:src="${image.getUrl()}" alt="description"/> -->
             </div>
 
             <div class="col-lg-4 mb-lg-0">
-                <img class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('/galleries/mushrooms/images/2014_grzyby.jpg')|" width="400" height="300" th:src="/galleries/mushrooms/images/2014_grzyby.jpg" alt="description"/>
+                <img class="img-fluid w-100 mb-4 rounded zoom" onclick="openModal('/galleries/mushrooms/images/2014_grzyby.jpg')" width="400" height="300" src="/galleries/mushrooms/images/2014_grzyby.jpg" alt="description"/>
 
                 <!-- <img th:each="image, stat : ${images}" th:if="${stat.index % 3 == 1}" class="img-fluid w-100 mb-4 rounded zoom" th:attr="onclick=|openModal('${image.getUrl()}')|" width="400" height="300" th:src="${image.getUrl()}" alt="description"/> -->
             </div>
